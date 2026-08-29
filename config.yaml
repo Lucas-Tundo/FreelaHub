@@ -1,0 +1,64 @@
+profile:
+  niche: "automações n8n, dashboards, apps web"
+  stack: "Next.js, TypeScript, Node.js, PostgreSQL, n8n"
+  price_min: 3000
+  price_max: 15000
+  price_currency: "BRL"
+  cases:
+    - title: "Automação n8n para e-commerce"
+      description: "Fluxo de pedidos ERP → WhatsApp com 200+ pedidos/dia sem falha"
+      tags: ["n8n", "automação", "whatsapp"]
+    - title: "Dashboard de vendas SaaS B2B"
+      description: "Painel React + PostgreSQL com 15k eventos/dia e exportação CSV"
+      tags: ["dashboard", "react", "postgresql"]
+    - title: "Integração CRM ↔ e-mail"
+      description: "Sync bidirecional HubSpot/Mailchimp para agência com 50k contatos"
+      tags: ["api", "integração", "oauth"]
+
+scoring:
+  threshold: 60
+  keywords:
+    - automação
+    - n8n
+    - dashboard
+    - next.js
+    - api
+    - integração
+    - supabase
+    - app web
+  keyword_weight: 15
+  budget_bonus: 20
+  low_competition_bonus: 15
+  freshness_bonus: 10
+  verified_client_bonus: 5
+  preferred_countries: ["BR", "US"]
+  blacklist:
+    - "urgente e barato"
+    - "teste grátis"
+    - "preciso pra ontem"
+  blacklist_penalty: -30
+
+platforms:
+  freelancer:
+    enabled: false
+    cron: "*/15 * * * *"
+  workana:
+    enabled: false
+    cron: "*/30 * * * *"
+  99freelas:
+    enabled: true
+    cron: "*/30 * * * *"
+  trampos:
+    enabled: true
+    kind: vaga
+    cron: "*/30 * * * *"
+
+worker:
+  request_delay_min_ms: 30000
+  request_delay_max_ms: 120000
+  respect_robots_txt: true
+
+proposal:
+  max_words: 180
+  model: "claude-sonnet-4-6"
+  language: "pt-BR"
